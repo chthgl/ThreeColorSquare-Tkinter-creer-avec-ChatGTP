@@ -20,3 +20,8 @@ Vous pouvez personnaliser certaines caractéristiques du programme en modifiant 
 - `COLORS` : détermine les couleurs des carrés g�n�r�s al�atoirement (les carr�s bleu, violet et orange ont des couleurs fixes)
 
 
+## Autheur
+
+Le code ci-dessus a été généré par un modèle de langage appelé GPT-3 (également connu sous le nom de chatGPT). Il s'agit d'un modèle de langage entraîné sur des milliards de textes pour prédire le texte suivant en fonction du texte donné en entrée. Le code généré par GPT-3 est donc un exemple de texte prédit par le modèle à partir d'une description générale du programme.
+
+Il a fallut génèrer étape par étape avec des adaptation grâce a chatGPT.
