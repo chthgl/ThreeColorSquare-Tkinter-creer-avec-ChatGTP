@@ -3,7 +3,6 @@
 Ce programme utilise la bibliothèque Tkinter pour créer une fenetre contenant des carrés animés. Les carrés bougent aléatoirement sur la fenétre et changent de couleur en fonction de leur collision.
 
 
-Le code a utilié est "carrer.py", les autres son la pour montré l'évolution du code avec ChatGPT.
 
 ## Comment l'utiliser
 
