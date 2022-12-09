@@ -31,7 +31,8 @@ if self.color == other_square.color:
     self.change_color("black
 ")
     other_square.change_color("black
-")```
+")
+```
 
 Lorsque l'utilisateur clique sur un carré, sa couleur est choisie aléatoirement parmi les couleurs de la liste. Vous pouvez désactiver ce comportement en commentant les lignes 28 à 31:
 ```
