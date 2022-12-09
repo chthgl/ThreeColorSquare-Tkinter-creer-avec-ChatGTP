@@ -35,7 +35,6 @@ if self.color == other_square.color:
 
 Lorsque l'utilisateur clique sur un carré, sa couleur est choisie aléatoirement parmi les couleurs de la liste. Vous pouvez désactiver ce comportement en commentant les lignes 28 à 31:
 ```
-
     def on_click(self, event):
         # Récupère les coordonnées de la souris lorsque l'événement "clic" est déclenché
         mouse_x = event.x
