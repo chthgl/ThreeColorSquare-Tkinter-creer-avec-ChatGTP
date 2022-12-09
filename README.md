@@ -11,7 +11,7 @@ Pour utiliser ce programme, vous devez avoir Python et la bibliothèque Tkinter 
 Une fois que ces prérequis sont satisfaits, vous pouvez executer le programme en utilisant la commande suivante dans votre terminal :
 
 ```
-python squares.py
+python carrer.py
 ```
 
 ## Personnalisation
