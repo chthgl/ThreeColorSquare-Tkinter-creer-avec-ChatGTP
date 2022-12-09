@@ -12,18 +12,16 @@ pip install tkinter
 
 ```
 
-
 ## Personnalisation
 
 
 Le code utilise la bibliothèque Tkinter pour créer une fenêtre dans laquelle des carrés bougent aléatoirement. Les carrés ont des couleurs aléatoires choisies parmi une liste de couleurs prédéfinies, mais vous pouvez facilement modifier cette liste en modifiant la variable COLORS à la ligne 10:
 ```
-
 COLORS = ["green", "yellow", "red"]```
-
-Vous pouvez également modifier la taille des carrés en modifiant la variable SIZE à la ligne 6:
 ```
+Vous pouvez également modifier la taille des carrés en modifiant la variable SIZE à la ligne 6:
 
+```
 SIZE = 10
 ```
 
