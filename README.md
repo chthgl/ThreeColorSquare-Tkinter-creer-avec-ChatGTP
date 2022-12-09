@@ -19,8 +19,8 @@ python squares.py
 Vous pouvez personnaliser certaines caractéristiques du programme en modifiant les valeurs des variables suivantes dans le code :
 
 - `SIZE` : détermine la taille des carrés en pixels
-- `SPEED` : détermine la vitesse de mouvement des carr�s en millisecondes
-- `COLORS` : détermine les couleurs des carrés g�n�r�s al�atoirement (les carr�s bleu, violet et orange ont des couleurs fixes)
+- `SPEED` : détermine la vitesse de mouvement des carrés en millisecondes
+- `COLORS` : détermine les couleurs des carrés générés aléatoirement (les carrés bleu, violet et orange ont des couleurs fixes)
 
 
 ## Autheur
