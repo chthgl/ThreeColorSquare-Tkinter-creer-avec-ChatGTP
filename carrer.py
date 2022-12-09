@@ -1,7 +1,9 @@
 # -*- coding: utf-8 -*-
 import tkinter as tk
-from random import randint
+from random import randint, choice
+
 class Square:
+    COLORS = ["green", "yellow", "red", "blue", "purple", "orange"]
     def __init__(self, x, y, color):
         self.x = x
         self.y = y
@@ -9,7 +11,7 @@ class Square:
         self.dy = 1 # déplacement en y
         self.color = color
         self.rect = canvas.create_rectangle(self.x, self.y, self.x + SIZE, self.y + SIZE, fill=self.color)
-
+        
     def move(self):
         # Vérifie si le carré touche un bord de la fenêtre
         if self.x + SIZE >= WIDTH or self.x <= 0:
@@ -22,18 +24,44 @@ class Square:
         self.y += self.dy
         canvas.move(self.rect, self.dx, self.dy)
         canvas.bind("<Motion>", self.on_mouse_move)
-    def on_mouse_move(self, event):
-        # Récupère la position actuelle de la souris
+        canvas.bind("<Button-1>", self.on_click)
+
+    def on_click(self, event):
+        # Récupère les coordonnées de la souris lorsque l'événement "clic" est déclenché
         mouse_x = event.x
         mouse_y = event.y
+
+        # Déclare clicked_square comme étant une variable globale
+        global clicked_square
+
+        # Initialise la variable clicked_square à None
+        clicked_square = None
 
         # Pour chaque carré
         for square in squares:
             # Si la souris est à côté du carré (à une distance inférieure à la moitié de la taille du carré)
-            if (abs(square.x - mouse_x) < SIZE/2 and abs(square.y - mouse_y) < SIZE/2):
+            if (abs(square.x - mouse_x) < SIZE and abs(square.y - mouse_y) < SIZE):
+                # On stocke le carré dans une variable globale
+                clicked_square = square
+        if clicked_square is not None:
+            clicked_square.change_color(choice(Square.COLORS))
+
+
+    def on_mouse_move(self, event):
+        # Récupère la position actuelle de la souris
+        mouse_x = event.x
+        mouse_y = event.y
+        self.change_color(choice(Square.COLORS))
+
+        # Pour chaque carré
+        for square in squares:
+            # Si la souris est à côté du carré (à une distance inférieure à la moitié de la taille du carré)
+            if (abs(square.x - mouse_x) < SIZE and abs(square.y - mouse_y) < SIZE):
                 # On inverse la direction de déplacement du carré
                 square.dx *= -1
                 square.dy *= -1
+
+
 
     # Ajout d'une fonction pour changer la couleur d'un carré
     def change_color(self, color):
@@ -44,16 +72,11 @@ class Square:
     def detect_collision(self, other_square):
         # Vérifie si les carrés se chevauchent
         if (self.x < other_square.x + SIZE and self.x + SIZE > other_square.x and
-            self.y < other_square.y + SIZE and self.y + SIZE > other_square.y):
-            if self.color == "green" and other_square.color == "green":
+        self.y < other_square.y + SIZE and self.y + SIZE > other_square.y):
+            if self.color == other_square.color:
                 self.change_color("black")
                 other_square.change_color("black")
-            elif self.color == "yellow" and other_square.color == "yellow":
-                self.change_color("black")
-                other_square.change_color("black")
-            elif self.color == "red" and other_square.color == "red":
-                self.change_color("black")
-                other_square.change_color("black")
+            
             # Inverse la direction de déplacement des deux carrés
             self.dx *= -1
             self.dy *= -1
@@ -65,7 +88,7 @@ class Square:
 
 
 # Définition des constantes
-SIZE = 5 # taille des carrés en pixels
+SIZE = 10 # taille des carrés en pixels
 speedrand = randint(15, 40)
 SPEED = speedrand # vitesse de déplacement en ms
 COLORS = ["green", "yellow", "red"] # couleurs des carrés
