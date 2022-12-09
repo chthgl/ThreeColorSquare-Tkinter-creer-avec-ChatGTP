@@ -64,5 +64,7 @@ COLORS = ["green", "yellow", "red", "blue", "purple", "orange"]```
 
 ## Auteur
 
-Le code ci-dessus a été généré par un modèle de langage appelé GPT-3 (également connu sous le nom de chatGPT). Il s'agit d'un modèle de langage entraîné sur des milliards de textes pour prédire le texte suivant en fonction du texte donné en entrée. Le code généré par GPT-3 est donc un exemple de texte prédit par le modèle à partir d'une description générale du programme.
+Le code ci-dessus a été généré par un modèle de langage appelé GPT-3 (également connu sous le nom de chatGPT). Il s'agit d'un modèle de langage entraîné sur des milliards de textes pour prédire le texte suivant en fonction du texte donné en entrée. Le code généré par GPT-3 est donc un exemple de texte prédit par le modèle à partir d'une description générale du programme, le programme a été généré en construisant le code petit a petit avec ChatGPT, c'est un exemple très simple de ce qu'il peu faire.
+
+N'ayant pas développer depuis quelques mois je suis très suppris de la persistance des réponse, Chat-GPT est vraiment incroyable.
 
