@@ -17,7 +17,7 @@ class Square:
         # Vérifie si le carré touche un bord de la fenêtre
         if self.x + SIZE >= WIDTH or self.x <= 0:
             self.dx *= -1
-        if self.y + SIZE >= HEIGHT or self.y <= 0:
+        if self.y + SIZE >= HEIGHT or self.y <= 0:  
             self.dy *= -1
 
         # Déplacement du carré
@@ -99,14 +99,17 @@ window = tk.Tk()
 window.title("Carrés")
 
 # Création du canvas
-WIDTH = 500
-HEIGHT = 500
+#WIDTH = 750
+#HEIGHT = 750
+WIDTH = window.winfo_screenwidth()
+HEIGHT = window.winfo_screenheight()
 canvas = tk.Canvas(window, width=WIDTH, height=HEIGHT)
 canvas.pack()
 
 # Création des carrés
 squares = []
-for j in range(15):
+for j in range(65):
+    
     for i in range(3):
         x = randint(0, WIDTH-SIZE)
         y = randint(0, HEIGHT-SIZE)
