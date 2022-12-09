@@ -3,7 +3,7 @@
 
 Ce code utilise la bibliothèque Tkinter pour afficher des carrés qui bougent aléatoirement dans une fenêtre. Les carrés ont des couleurs aléatoires choisies parmi une liste de couleurs prédéfinies. Lorsqu'un carré entre en collision avec un autre carré, ils rebondissent l'un contre l'autre. Si les deux carrés ont la même couleur, ils deviennent noirs. Lorsque l'utilisateur clique sur un carré, sa couleur est choisie aléatoirement parmi les couleurs de la liste. Lorsque l'utilisateur déplace la souris sur un carré, sa couleur est également choisie aléatoirement.
 ## Pré-requis
-Avant de pouvoir utiliser ce code, vous devez installer la bibliothèque Tkinter en utilisant pip: :
+Avant de pouvoir utiliser ce code, vous devez installer la bibliothèque Tkinter en utilisant pip :
 
 
 ```
