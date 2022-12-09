@@ -19,19 +19,17 @@ Le code utilise la bibliothèque Tkinter pour créer une fenêtre dans laquelle 
 ```
 COLORS = ["green", "yellow", "red"]
 ```
-Vous pouvez également modifier la taille des carrés en modifiant la variable SIZE à la ligne 6:
+Vous pouvez également modifier la taille des carrés en modifiant la variable SIZE à la ligne 8:
 
 ```
-SIZE = 10
+self.size = randint(4,8)
 ```
 
 Lorsqu'un carré entre en collision avec un autre carré, ils rebondissent l'un contre l'autre. Si les deux carrés ont la même couleur, ils deviennent noirs. Vous pouvez désactiver ce comportement en commentant les lignes 44 à 46:f.write
 ```
 if self.color == other_square.color:
-    self.change_color("black
-")
-    other_square.change_color("black
-")
+    self.change_color("black")
+    other_square.change_color("black")
 ```
 
 Lorsque l'utilisateur clique sur un carré, sa couleur est choisie aléatoirement parmi les couleurs de la liste. Vous pouvez désactiver ce comportement en commentant les lignes 28 à 31:
